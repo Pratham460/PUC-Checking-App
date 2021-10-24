@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Drprofile">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PROFILE"
+        android:textSize="35dp"
+        android:textAlignment="center"
+        android:padding="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/crname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car name:"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/carname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/crno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car number plate:"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/noplate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/puc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="PUC Certificate:"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/photo"
+            android:layout_marginHorizontal="45dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPLOAD"/>
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/pimage"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="If your puc certificate is not available in your device then you can download it by tapping on the button given below"
+        android:textSize="15dp"
+        android:layout_margin="20dp"/>
+
+    <Button
+        android:id="@+id/download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DOWNLOAD CERTIFICATE"
+        android:textSize="13dp"
+        android:layout_marginHorizontal="100dp"/>
+
+    <Button
+        android:id="@+id/drprof"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="80dp"/>
+
+
+</LinearLayout>
