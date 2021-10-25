@@ -33,12 +33,14 @@ public class Drhomepage extends AppCompatActivity {
         userlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int i, long l) {
-                String text = userlist.getItemAtPosition(i).toString();
+                String text1 = userlist.getItemAtPosition(i).toString();
 //                Toast.makeText(Drhomepage.this, "Car number:"+ text, Toast.LENGTH_SHORT).show();
                 Intent s = getIntent();
                 String pwdtxt = s.getStringExtra("pwd");
 //                Toast.makeText(Drhomepage.this, "password" + pwdtxt, Toast.LENGTH_SHORT).show();
-                Cursor res = DB.getdatatolist(text);
+                Cursor res = DB.getdatatolist(text1.substring(18,28));
+//                Toast.makeText(Drhomepage.this, "carno: "+text1.substring(18,28) , Toast.LENGTH_SHORT).show();
+
                 if (res.getCount() == 0) {
                     Toast.makeText(Drhomepage.this, "No Entry Exists", Toast.LENGTH_SHORT).show();
                     return;
@@ -82,7 +84,7 @@ public class Drhomepage extends AppCompatActivity {
             Toast.makeText(this,"No data to show", Toast.LENGTH_SHORT).show();
         }else{
             while (cursor.moveToNext()){
-                listitem.add(cursor.getString(2));
+                listitem.add("Car number plate: "+cursor.getString(2));
             }
             adapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,listitem);
             userlist.setAdapter(adapter);

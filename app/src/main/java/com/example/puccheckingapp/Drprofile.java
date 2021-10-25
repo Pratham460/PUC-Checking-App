@@ -86,7 +86,7 @@ public class Drprofile extends AppCompatActivity {
                     Boolean checkinsertdata = DB.insertcardata(pawd,carname,carno,covertimg);
                     if (checkinsertdata == true) {
 
-                        Toast.makeText(Drprofile.this, "Registered successfully"+ "\n"+"password:" + pawd, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Drprofile.this, "Record created successfully successfully", Toast.LENGTH_SHORT).show();
                         Intent drhomescreeen = new Intent(getApplicationContext(), Drhomepage.class);
                         startActivity(drhomescreeen);
 //                        Intent log = new Intent(getApplicationContext(), Driverlog.class);
